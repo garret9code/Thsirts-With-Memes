@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkoutstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Tshirts With Memes | Checkout</title>
+</head>
+<body>
+<!--Navbar-->
+<section class="menu">
+    <div class="logo">
+        <h2>Tshirts With Memes</h2>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="createmerch.html">Create</a></li>
+                <li><a href="#" class="login" id="navbtn">Sign In</a></li>
+                <li><a href="account.html">Create Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<section class="payment">
+<div class="cart">
+    <h3>Your Order</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th colspan="2">Price</th>
+                <th colspan="2">Quantity</th>
+                <th colspan="2">Total</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <div class="product"><h6>Shirt</h6></div>
+                          <ul>
+                              <li class="style">Mens 
+                                  <span class="size">Small</span>
+                                  <span class="color">White</span>
+                              </li>
+                          </ul>         
+            </td>
+            <td colspan="2">$20.00</td>
+            <td colspan="2">1</td>
+            <td colspan="2">$20.00</td>
+        </tr>
+        <tr>
+            <td>Shipping</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2">$5.00</td>
+        </tr>
+        <tr>
+            <td>Taxes</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2" id="taxes"></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2" id="grand">$25.00</td>
+        </tr>
+    </table>
+</div>
+<div class="credit">
+    <h4>Mailing Address</h4>
+    <form>
+        <input type="text" placeholder="First name" required>
+        <input type="text" placeholder="Last name" required><br>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="City" required>
+        <select name="state" id="state" required> 
+            <option value="AZ">AZ</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="NV">NV</option>
+            <option value="OR">OR</option>
+            <option value="WA">WA</option>
+        </select>
+        <input type="text" placeholder="Zip" required>
+
+        <h4>Payment Information</h4>
+
+        <input type="text" placeholder="Cardholder name" required><br>
+        <input type="text" placeholder="Card number" required>
+        <input type="text" placeholder="CVC" required><br>
+        <label>Exp</label>
+        <select name="exp" id="expmonth">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select name="exp" id="expyear">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2929">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+        </select><br>
+        <input type="sumbit" value="Send" id="paysend">
+    </form>
+</div>
+</section>
+<!--footer-->
+<footer class="footer">
+        <div class="blogo">
+            <h1>Tshirts With Memes</h1>
+            <p>Copyright &copy; 2021</p>
+        </div>
+        <div class="bnav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="createmerch.html">Create</a></li>
+                    <li><a href="account.html">Create Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    color: #000;
+    line-height: 1.5;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/*navbar*/
+.menu{
+    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    gap: 2px;
+    background-color: #000;
+    color: #fff;
+}
+.navbar{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    height: 60px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 20px;
+}
+.navbar a:hover{
+    border-bottom: 3px solid #5F9EA0;
+    color: #5F9ea0;
+}
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Bangers';
+    font-size: 35px;
+    padding: 5px;
+    text-align: center;
+    color: #5F9EA0;
+}
+/*footer*/
+.footer{
+    color:slategrey;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 10px;
+}
+.footer a{
+    color:#5F9EA0;
+}
+.footer .social-links a{
+    margin: 0 10px;
+}
+.footer .social-links a li{
+    color: #5F9EA0;
+}
+.blogo{
+    grid-column-start:1;
+    grid-column-end:2;
+    margin-left: 10px;
+    text-align: center;
+}
+.bnav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.social-links{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+/*image upload*/
+h3{
+    font-family: 'Bangers';
+    font-size: 45px;
+}
+#inpFile{
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.image-preview{
+    width:300px;
+    min-height: 200px;
+    border: 2px solid #ddd;
+    margin-top: 15px;
+    /*default text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #cccccc;
+}
+.image-preview_image{
+    display:none;
+    width: 100%;
+}
+h3{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+.merchcreate{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1/2fr 1/2fr;
+    gap: 5px;
+    background-color: #000;
+}
+.form{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: #fff;
+    padding: 10px;
+    font-size: 35px;
+}
+form select option{
+    font-size: 16px;
+}
+.fileup{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end: 2;
+    align-items: right;
+    align-content:right;
+    justify-content: right;
+    margin-left: 600px;
+}
+.buttons{
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 2;
+   grid-row-end: 3;
+    padding: 5px 20px;
+    align-items: center;
+    margin-left: 710px;
+
+}
+.btn{
+    background-color: #fff;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0, 0.9); 
+    margin-top: 25px;
+    text-decoration: none;
+    margin: 10px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/*note*/
+.note{
+    background-color: slategray;
+    color: #000;
+    font-family: 'Bangers';
+    text-align: center;
+    padding-bottom: 10px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    height: 100%;
+}
+/*example merch*/
+.shop{
+    background-color: #000;
+    background-size: cover;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    gap: 5px;
+}
+.shophead{
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Bangers';
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.note h5{
+    font-size: 35px;
+}
+.note i{
+    padding: 0 10px;
+}
+.shop img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*responsive mobile*/
+@media (max-width: 500px){
+    /*nav*/
+    .menu{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1/2fr;
+        display: grid;
+    }
+    .logo{
+        grid-column-start: 1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end: 2;
+    }
+    .navbar{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end:3;
+    }
+    .navbar a{
+        font-size: 14px;
+    }
+    h3{
+        text-align: center;
+        font-size: 35px;
+    }
+    /*image upload*/
+    #inpFile{
+        padding: 5px;
+    }
+    .merchcreate{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1/2fr 1fr 1/2fr;
+        background-color: #000;
+    }
+    .fileup{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 2;
+        margin-left:100px;
+        margin-right: 100px;
+    }
+    .image-preview{
+        width:225px;
+        min-height: 200px;
+        border: 2px solid #ddd;
+        margin-top: 15px;
+        /*default text*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #cccccc;
+    }
+    .btn{
+        background-color: #fff;
+        padding: 5px 8px;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 8px;
+        border-radius: 3px;
+        box-shadow: 5px 5px 25px -5px rgba(0,0,0, 0.9); 
+        margin-top: 12px;
+        text-decoration: none;
+        margin: 5px;
+    }
+    .form{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:3;
+        grid-row-end: 4;
+        color: #fff;
+        padding: 10px;
+        font-size: 35px;
+    }
+    .buttons{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        padding: 5px 20px;
+        align-items: center;
+        margin-left:auto;
+        margin-right: auto;
+        display: block;
+     }
+
+     .note{
+        background-color: slategray;
+        color: #000;
+        font-family: 'Bangers';
+        padding-bottom: 10px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 100%;
+        width: 80%;
+    }
+    .note h5{
+        font-size: 12px;
+        text-align: center;
+    }
+    /*example merch*/
+    .shop{
+        background-color: #000;
+        background-size: cover;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 2;
+        gap: 5px;
+    }
+    .shophead{
+        font-size: 35px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Bangers';
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .note h5{
+        font-size: 35px;
+    }
+    .note i{
+        padding: 0 10px;
+    }
+    .shop img{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*footer*/
+    .footer{
+        color:slategrey;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+    .blogo{
+        grid-column-start:1;
+        grid-column-end:2;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .bnav{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 5px;
+    }
+    .social-links{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding: 5px;
+    }
+}

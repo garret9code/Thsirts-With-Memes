@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createmerchstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Tshirt With Memes | Create Merch</title>
+</head>
+<body>
+     <!--navbar-->
+     <section class="menu">
+        <div class="logo">
+            <h2>Tshirts With Memes</h2>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="createmerch.html">Create</a></li>
+                    <li><a href="#" class="login" id="navbtn">Sign In</a></li>
+                    <li><a href="account.html">Create Account</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <h3>Put Your Meme On Merch</h3>
+<section class="merchcreate">
+    <section class="form">
+        <form>
+            <div class="form-control">
+                <label>Merch:</label>
+                <select name="merch" id="merch">
+                    <option value="shirt">Shirt</option>
+                    <option value="mug">Mug</option>
+                    <option value="hoodie">Hoodie</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Size:</label>
+                <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">Xlarge</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Color:</label>
+                <select name="color" id="color">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="gray">Gray</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Style:</label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="boys">Boys</option>
+                    <option value="girls">Girls</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Quantity:</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+    <!--file upload-->
+    <section class="fileup">
+        <input type="file" name="inpFile" id="inpFile">
+        <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview_image">
+            <span class="image-preview_default-text">Image Preview</span>
+        </div>
+
+        <script>
+            const inpFile = document.getElementById("inpFile");
+            const previewContainer = document.getElementById("imagePreview");
+            const previewImage = previewContainer.querySelector(".image-preview_image");
+            const previewDefaultText = previewContainer.querySelector(".image-preview_default-text");
+
+            inpFile.addEventListener("change", function(){
+                const file = this.files[0];
+                //console.log(file);
+                if (file) {
+                    const reader = new FileReader();
+
+                    previewDefaultText.style.display = "none";
+                    previewImage.style.display = "block";
+
+                    reader.addEventListener("load", function(){
+                        //console.log(this);
+                        previewImage.setAttribute("src", this.result);
+                    });
+                    reader.readAsDataURL(file);
+                
+                } else{
+                    previewDefaultText.style.display = null;
+                    previewImage.style.display = null;
+                    previewImage.setAttribute("src", "");
+                }
+            });
+        </script>
+
+            <button type="submit" name="sumbit" class="btn">Upload Image</button>
+    </section>
+
+    <div class="buttons">
+        <button type="submit" name="cart" class="btn">Add to Cart</button>
+        <a href="checkout.html" name="checkout" class="btn">Checkout</a>
+    </div>
+    <div class="note">
+        <h5> <i class="fas fa-info"></i> Please note that all memes will be placed on the front of hoodies and shirts, and on the side of the mugs</h5> 
+    </div>
+</section>
+<!--example merch-->
+<section class="shop">
+    <div class="shophead">
+        <h4>Samples of What Your Merch Will Look Like</h4>
+    </div>
+    <div class="item1">
+        <img src="taylor-dG4Eb_oC5iM-unsplash.jpg" alt="picture of a shirt" width="350px" height="400px">
+    </div>
+    <div class="item2">
+        <img src="mel-poole-vQQoZzKO9Ig-unsplash.jpg" alt="picture of a mug" width="350px" height="400px">
+    </div>
+    <div class="item3">
+        <img src="ben-den-engelsen-eNyXK17so6A-unsplash.jpg" alt="picture of a hoodie" width="340px" height="400px">
+    </div>
+</section>
+
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="blogo">
+            <h1>Tshirts With Memes</h1>
+            <p>Copyright &copy; 2021</p>
+        </div>
+        <div class="bnav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="createmerch.html">Create</a></li>
+                    <li><a href="account.html">Create Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
